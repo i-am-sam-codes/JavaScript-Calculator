@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin-top: 40px;
+    background-color: rgb(245, 231, 218);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: peachpuff;
+    border-radius: 3%;
+    height: 600px;
+    width: 350px;
+}
+
+.screen {
+    position: relative;
+    bottom: 220px;
+    background-color: rgb(209, 163, 123);
+    border-radius: 3%;
+    height: 100px;
+    width: 320px;
+}
+
+.sum {
+    font-size: 50px; 
+    margin: auto;
+    text-align: right;
+    padding: 20px;
+}
