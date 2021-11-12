@@ -37,3 +37,35 @@ body {
     text-align: right;
     padding: 20px;
 }
+
+.button-container {
+    display: grid;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    width: 320px;
+    height: 420px;
+    grid-template-columns: repeat(4, 70px);
+    grid-auto-rows: 1fr;
+    /* grid-template-rows: minmax(70px, auto) repeat(5, 50px); */
+    background-color: rgb(243, 207, 150);
+    
+}
+
+.span-two {
+    grid-column: span 2;
+    background: rgb(226, 74, 74);
+    font-size: 25px;
+    border-radius: 10%;
+    height: 4rem;
+}
+
+.button {
+    cursor: pointer;
+    font-size: 25px;
+    outline: none;
+    border-radius: 10%;
+    height: 4rem;
+   
+}

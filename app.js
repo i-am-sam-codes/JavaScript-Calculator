@@ -1,4 +1,4 @@
-
+const container = document.querySelector('.container');
 
 
 //functions for basic math operators
@@ -26,3 +26,5 @@ function operate (num1, num2) {
     return addNum(num1, num2);
 }
 console.log(operate(3,3))
+
+
