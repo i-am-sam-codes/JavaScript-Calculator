@@ -1,4 +1,6 @@
 const container = document.querySelector('.container');
+const display = document.querySelector('.sum');
+const buttonOne = document.getElementById('one');
 
 
 //functions for basic math operators
@@ -28,3 +30,15 @@ function operate (num1, num2) {
 console.log(operate(3,3))
 
 
+
+//changes the display passing the event and nunmber through tht efunction. 
+//Setting innerHTML ti the element I want to appear
+function changeDisplay(event, num) {
+    e = event.target;
+    e.innerHTML = num;
+    let div = document.getElementById('sum');
+    let text = div.innerHTML;
+    div.innerHTML = text + '' + num;
+}
+
+changeDisplay();
