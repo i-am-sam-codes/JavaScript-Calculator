@@ -21,11 +21,27 @@ function divideNum (num1, num2) {
     return num1 / num2;
 }
 
-//function operate that takes in an operator and 2 numbers and then calls the 
+//function operate that takes in an operator and 2 numbers then calls the 
 //one of the above functions on the numbers
-function operate (num1, num2) {
+function operate (operator, firstArg, secondArg) {
     
-    return addNum(num1, num2);
+    switch (operator){
+        case '+':
+            return addNum(firstArg,secondArg);
+            break;
+        case '-':
+            return subtractNum(firstArg,secondArg);
+            break;
+        case 'x':
+            return multiplyNum(firstArg,secondArg);
+            break;
+        case '*':
+            return multiplyNum(firstArg,secondArg);
+            break;
+        case '/':
+            return divideNum(firstArg,secondArg);
+            break;
+        }
 }
 console.log(operate(3,3))
 

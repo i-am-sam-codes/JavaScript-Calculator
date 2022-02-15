@@ -12,7 +12,7 @@ body {
     align-items: center;
 }
 
-.background{
+.background {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,10 +45,10 @@ body {
     align-items: center;
     margin-top: 10%;
     width: 320px;
-    height: 420px;
+    height: 370px;
     grid-template-columns: repeat(4, 70px);
-    grid-auto-rows: 1fr;
-    /* grid-template-rows: minmax(70px, auto) repeat(5, 50px); */
+    grid-auto-rows: 70px; 
+    /* grid-template-rows: minmax(70px, auto) repeat(5, 50px); 1fr */
     background-color: rgb(243, 207, 150);
     
 }
