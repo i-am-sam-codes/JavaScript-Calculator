@@ -4,51 +4,51 @@ const buttonOne = document.getElementById('one');
 
 
 //functions for basic math operators
-function addNum (num1, num2) {
-    return num1 + num2;
+function add(a, b) {
+    return a + b;
 }
 
-
-function subtractNum (num1, num2) {
-    return num1 - num2;
+function subtract(a, b) {
+    return a - b;
 }
 
-function multiplyNum (num1, num2) {
-    return num1 * num2;
+function multiply(a, b) {
+    return a * b;
 }
 
-function divideNum (num1, num2) {
-    return num1 / num2;
+function divide(a, b) {
+    return a / b;
+}
+
+//rounds result
+function roundResult(number) {
+    return Math.round(number * 1000) / 1000
 }
 
 //function operate that takes in an operator and 2 numbers then calls the 
 //one of the above functions on the numbers
-function operate (operator, firstArg, secondArg) {
-    
-    switch (operator){
+function basicOp(operation, a, b) {
+    a = Number(a)
+    b = Number(b)
+    switch (operation) {
         case '+':
-            return addNum(firstArg,secondArg);
-            break;
+            return add(a, b);
         case '-':
-            return subtractNum(firstArg,secondArg);
-            break;
-        case 'x':
-            return multiplyNum(firstArg,secondArg);
-            break;
+            return subtract(a, b);
         case '*':
-            return multiplyNum(firstArg,secondArg);
-            break;
+            return multiply(a, b);
         case '/':
-            return divideNum(firstArg,secondArg);
-            break;
-        }
+            return divide(a, b);
+        default:
+            return null;
+    }
 }
-console.log(operate(3,3))
+
+basicOp()
 
 
-
-//changes the display passing the event and nunmber through tht efunction. 
-//Setting innerHTML ti the element I want to appear
+// changes the display passing the event and nunmber through the function. 
+// Setting innerHTML to the element I want to appear
 function changeDisplay(event, num) {
     e = event.target;
     e.innerHTML = num;
@@ -58,3 +58,15 @@ function changeDisplay(event, num) {
 }
 
 changeDisplay();
+
+//clear action button 
+function clear() {
+    display.textContent = display.textContent
+    .toString()
+    .slice(0, -1);
+}
+
+//equal button 
+function total() {
+    basicOp()
+}
