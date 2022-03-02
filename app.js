@@ -1,7 +1,35 @@
 const container = document.querySelector('.container');
 const display = document.querySelector('.sum');
-const buttonOne = document.getElementById('one');
+const numberButtons = document.querySelectorAll('.')
+const operatorButtons = document.querySelectorAll('.')
 
+
+
+const input = '';
+const secInput = '';
+const operator = '';
+const currentOperation = null;
+const noResetScreen = false;
+
+
+
+window.addEventListener('keydown', setDisplay)
+
+numberButtons.forEach((button) =>
+  button.addEventListener('click', () => setDisplay(button.textContent))
+)
+
+operatorButtons.forEach((button) =>
+  button.addEventListener('click', () => setOperation(button.textContent))
+)
+
+
+//assigns input to display text
+function input() {
+    if (input !== '') {
+        input = display.textContent
+    }
+}
 console.log(display.textContent)
 //functions for basic math operators
 function add(a, b) {
@@ -46,24 +74,32 @@ function basicOp(operation, a, b) {
 
 basicOp()
 
+//number function 
+function numInput(num) {
+    if(display.textcontent == 0 || noResetScreen)
+    clearScreen()
+    display.textcontent += num
+}
 
 // changes the display passing the event and nunmber through the function. 
 // Setting innerHTML to the element I want to appear
-function changeDisplay(value) {
-    e = event.target;
-    e.innerHTML = num;
-    let div = document.getElementById('sum');
-    let text = div.innerHTML;
-    div.innerHTML = text + '' + num;
+function setDisplay(e) {
+    if (e.key >= 0 && e.key <= 9) numInput(e.key)
 }
+// function changeDisplay(e) {
+//     display.textContent = e
+//     div.innerText = text + '' + e;
+// }
 
 
 
-changeDisplay();
+// changeDisplay();
+
 
 //Clear button 
 function clearScreen() {
-    document.getElementById("sum").value = "";
+    display.textContent = ''
+    noResetScreen = false
 }
 //deletes one character from the screen
 function deleteCharacter() {
