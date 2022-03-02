@@ -2,7 +2,7 @@ const container = document.querySelector('.container');
 const display = document.querySelector('.sum');
 const buttonOne = document.getElementById('one');
 
-
+console.log(display.textContent)
 //functions for basic math operators
 function add(a, b) {
     return a + b;
@@ -49,7 +49,7 @@ basicOp()
 
 // changes the display passing the event and nunmber through the function. 
 // Setting innerHTML to the element I want to appear
-function changeDisplay(event, num) {
+function changeDisplay(value) {
     e = event.target;
     e.innerHTML = num;
     let div = document.getElementById('sum');
@@ -57,10 +57,16 @@ function changeDisplay(event, num) {
     div.innerHTML = text + '' + num;
 }
 
+
+
 changeDisplay();
 
-//clear action button 
-function clear() {
+//Clear button 
+function clearScreen() {
+    document.getElementById("sum").value = "";
+}
+//deletes one character from the screen
+function deleteCharacter() {
     display.textContent = display.textContent
     .toString()
     .slice(0, -1);
