@@ -10,28 +10,27 @@
 <body>
     
     <div class="background">
-        <div class="screen">
-            <div id="sum"class="sum"></div>
-        </div>
+        <div data-previous-operand></div>
+        <div data-current-operand></div>
         <div class="button-container">
-            <button class="span-two" onclick="setDisplay(e)">C</button>
-            <button class="button" onclick="setDisplay(e)">DEL</button>
-            <button class="button" onclick="setDisplay(e)">1</button>
-            <button class="button" onclick="setDisplay(e)">2</button>
-            <button class="button" onclick="setDisplay(e)">3</button>
-            <button class="button" onclick="setDisplay(e)">*</button>
-            <button class="button" onclick="setDisplay(e)">÷</button>
-            <button class="button" onclick="setDisplay(e)">4</button>
-            <button class="button" onclick="setDisplay(e)">5</button>
-            <button class="button" onclick="setDisplay(e)">6</button>
-            <button class="button" onclick="setDisplay(e)">+</button>
-            <button class="button" onclick="setDisplay(e)">7</button>
-            <button class="button" onclick="setDisplay(e)">8</button>
-            <button class="button" onclick="setDisplay(e)">9</button>
-            <button class="button" onclick="setDisplay(e)">-</button>
-            <button class="button" onclick="setDisplay(e)">0</button>
-            <button class="button" onclick="setDisplay(e)">.</button>
-            <button class="span-two" onclick="setDisplay(e)">=</button>
+            <button  data-all-clear class="span-two">ON</button>
+            <button  data-delete class="delete">DEL</button>
+            <button  data-number>1</button>
+            <button  data-number>2</button>
+            <button  data-number>3</button>
+            <button  data-operation>*</button>
+            <button  data-operator>÷</button>
+            <button  data-number>4</button>
+            <button  data-number>5</button>
+            <button  data-mumber>6</button>
+            <button  data-operator>+</button>
+            <button  data-number>7</button>
+            <button  data-number>8</button>
+            <button  data-number>9</button>
+            <button  data-operatorclass="operator">-</button>
+            <button  data-number>0</button>
+            <button  data-operator>.</button>
+            <button data-equals class=""span-two>=</button>
         </div>
     </div>
    <script src="app.js"></script>

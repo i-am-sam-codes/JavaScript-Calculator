@@ -61,7 +61,7 @@ body {
     height: 4rem;
 }
 
-.button {
+button {
     cursor: pointer;
     font-size: 25px;
     outline: none;
