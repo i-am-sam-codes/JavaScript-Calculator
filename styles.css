@@ -22,7 +22,7 @@ body {
     width: 350px;
 }
 
-.screen {
+#input {
     position: relative;
     bottom: 220px;
     background-color: rgb(209, 163, 123);
@@ -31,7 +31,7 @@ body {
     width: 320px;
 }
 
-.sum {
+#input {
     font-size: 50px; 
     margin: auto;
     text-align: right;
